@@ -91,6 +91,8 @@ export default function ProductsPage() {
 					<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 						<Button
 							variant="secondary"
+							href="https://cephie.app/discord"
+							newTab={true}
 							className="bg-white text-zinc-950 hover:bg-zinc-100 w-full sm:w-auto"
 						>
 							Join our Discord

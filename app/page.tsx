@@ -19,7 +19,13 @@ export default function Home() {
 					<Button variant="primary" href="/products">
 						Our Products
 					</Button>
-					<Button variant="secondary">Join our Discord</Button>
+					<Button
+						variant="secondary"
+						href="https://cephie.app/discord"
+						newTab={true}
+					>
+						Join our Discord
+					</Button>
 				</div>
 			</section>
 
@@ -152,6 +158,8 @@ export default function Home() {
 					<div className="flex flex-col sm:flex-row items-center gap-4">
 						<Button
 							variant="secondary"
+							href="https://cephie.app/discord"
+							newTab={true}
 							className="bg-white text-zinc-950 hover:bg-zinc-100 w-full sm:w-auto"
 						>
 							Join our Discord

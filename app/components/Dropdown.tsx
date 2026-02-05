@@ -26,7 +26,8 @@ export default function Dropdown({
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
-	const selectedOption = options.find((opt) => opt.value === value) || options[0];
+	const selectedOption =
+		options.find((opt) => opt.value === value) || options[0];
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -39,7 +40,8 @@ export default function Dropdown({
 		};
 
 		document.addEventListener('mousedown', handleClickOutside);
-		return () => document.removeEventListener('mousedown', handleClickOutside);
+		return () =>
+			document.removeEventListener('mousedown', handleClickOutside);
 	}, []);
 
 	const handleSelect = (optionValue: string) => {
@@ -72,7 +74,9 @@ export default function Dropdown({
 					aria-expanded={isOpen}
 				>
 					<span>{selectedOption?.label}</span>
-					<div className={`text-zinc-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+					<div
+						className={`text-zinc-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+					>
 						<svg
 							className="w-5 h-5"
 							fill="none"
@@ -127,7 +131,6 @@ export default function Dropdown({
 						</div>
 					</div>
 				)}
-				{/* Hidden input for form submission if needed */}
 				<input
 					type="hidden"
 					name={name}
