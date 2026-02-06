@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
 		const embed = {
 			title: 'New Team Application',
-			color: 0x3b82f6, // blue-500
+			color: 0x3b82f6,
 			fields: [
 				{
 					name: 'Full Name',

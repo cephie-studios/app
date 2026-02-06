@@ -84,6 +84,7 @@ export default function Navbar() {
 					<div className="md:hidden flex items-center">
 						<Button
 							variant="primary"
+							href="/apply"
 							className="px-4! py-2! rounded-xl! text-xs!"
 						>
 							Join
