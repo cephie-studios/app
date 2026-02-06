@@ -17,7 +17,9 @@ export default async function AdminPage() {
 						Admin Panel
 					</h1>
 					<p className="text-zinc-600 mb-4">
-						{session ? "You do not have permission to access this page." : "Please login to access the admin panel."}
+						{session
+							? 'You do not have permission to access this page.'
+							: 'Please login to access the admin panel.'}
 					</p>
 					<form
 						action={async () => {
@@ -29,7 +31,7 @@ export default async function AdminPage() {
 							type="submit"
 							className="px-8 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-semibold transition-colors shadow-lg"
 						>
-							{session ? "Switch Account" : "Login with Discord"}
+							{session ? 'Switch Account' : 'Login with Discord'}
 						</Button>
 					</form>
 				</div>
@@ -37,17 +39,33 @@ export default async function AdminPage() {
 		);
 	}
 
-	const legalDir = path.join(process.cwd(), 'app', 'data', 'legal');
-	const legalFiles = fs
-		.readdirSync(legalDir)
-		.filter((f) => f.endsWith('.json'));
+    interface LegalSection {
+        title: string;
+        content: string;
+        lastUpdated?: string;
+    }
 
-	const allLegalData: Record<string, Record<string, unknown>> = {};
-	legalFiles.forEach((file) => {
-		const key = file.replace('.json', '');
-		const content = fs.readFileSync(path.join(legalDir, file), 'utf8');
-		allLegalData[key] = JSON.parse(content) as Record<string, unknown>;
-	});
+    const legalDir = path.join(process.cwd(), 'app', 'data', 'legal');
+    let allLegalData: Record<string, LegalSection[]> = {};
 
-	return <AdminPanel user={session.user} initialData={allLegalData} />;
+    try {
+        const legalFiles = fs
+            .readdirSync(legalDir)
+            .filter((f) => f.endsWith('.json'));
+
+        for (const file of legalFiles) {
+            try {
+                const key = file.replace('.json', '');
+                const content = fs.readFileSync(path.join(legalDir, file), 'utf8');
+                allLegalData[key] = JSON.parse(content) as LegalSection[];
+            } catch (error) {
+                console.error(`Error processing file ${file}:`, error);
+            }
+        }
+    } catch (error) {
+        console.error('Error reading legal directory:', error);
+        allLegalData = {};
+    }
+
+    return <AdminPanel user={session.user} initialData={allLegalData} />;
 }
