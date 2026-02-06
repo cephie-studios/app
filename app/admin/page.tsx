@@ -17,9 +17,8 @@ export default async function AdminPage() {
 						Admin Panel
 					</h1>
 					<p className="text-zinc-600 mb-4">
-						{session
-							? 'You do not have permission to access this page.'
-							: 'Please login to access the admin panel.'}
+						{session &&
+							'You do not have permission to access this page.'}
 					</p>
 					<form
 						action={async () => {
@@ -27,10 +26,7 @@ export default async function AdminPage() {
 							await signIn('discord');
 						}}
 					>
-						<Button
-							type="submit"
-							className="px-8 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-semibold transition-colors shadow-lg"
-						>
+						<Button type="submit">
 							{session ? 'Switch Account' : 'Login with Discord'}
 						</Button>
 					</form>
@@ -39,33 +35,36 @@ export default async function AdminPage() {
 		);
 	}
 
-    interface LegalSection {
-        title: string;
-        content: string;
-        lastUpdated?: string;
-    }
+	interface LegalSection {
+		title: string;
+		content: string;
+		lastUpdated?: string;
+	}
 
-    const legalDir = path.join(process.cwd(), 'app', 'data', 'legal');
-    let allLegalData: Record<string, LegalSection[]> = {};
+	const legalDir = path.join(process.cwd(), 'app', 'data', 'legal');
+	let allLegalData: Record<string, LegalSection[]> = {};
 
-    try {
-        const legalFiles = fs
-            .readdirSync(legalDir)
-            .filter((f) => f.endsWith('.json'));
+	try {
+		const legalFiles = fs
+			.readdirSync(legalDir)
+			.filter((f) => f.endsWith('.json'));
 
-        for (const file of legalFiles) {
-            try {
-                const key = file.replace('.json', '');
-                const content = fs.readFileSync(path.join(legalDir, file), 'utf8');
-                allLegalData[key] = JSON.parse(content) as LegalSection[];
-            } catch (error) {
-                console.error(`Error processing file ${file}:`, error);
-            }
-        }
-    } catch (error) {
-        console.error('Error reading legal directory:', error);
-        allLegalData = {};
-    }
+		for (const file of legalFiles) {
+			try {
+				const key = file.replace('.json', '');
+				const content = fs.readFileSync(
+					path.join(legalDir, file),
+					'utf8'
+				);
+				allLegalData[key] = JSON.parse(content) as LegalSection[];
+			} catch (error) {
+				console.error(`Error processing file ${file}:`, error);
+			}
+		}
+	} catch (error) {
+		console.error('Error reading legal directory:', error);
+		allLegalData = {};
+	}
 
-    return <AdminPanel user={session.user} initialData={allLegalData} />;
+	return <AdminPanel user={session.user} initialData={allLegalData} />;
 }
