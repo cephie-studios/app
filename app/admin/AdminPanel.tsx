@@ -16,7 +16,7 @@ interface LegalSection {
 	subsections?: Subsection[];
 }
 
-export default function AdminPanel({ user, initialData }: { user: any, initialData: Record<string, any> }) {
+export default function AdminPanel({ user, initialData }: { user: { name?: string | null, email?: string | null, image?: string | null }, initialData: Record<string, LegalSection[]> }) {
 	const [activeTab, setActiveTab] = useState<string>(Object.keys(initialData)[0] || 'terms');
 	const [data, setData] = useState<LegalSection[]>([]);
 	const [isSaving, setIsSaving] = useState(false);
@@ -58,7 +58,7 @@ export default function AdminPanel({ user, initialData }: { user: any, initialDa
 	const updateSection = (
 		index: number,
 		field: keyof LegalSection,
-		value: any
+		value: string | Subsection[]
 	) => {
 		const newData = [...data];
 		newData[index] = { ...newData[index], [field]: value };

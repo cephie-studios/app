@@ -6,7 +6,7 @@ import path from "path";
 export async function POST(request: Request) {
   const session = await auth();
   
-  if (!session || !session.user) {
+  if (!session?.user?.isAdmin) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
