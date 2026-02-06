@@ -12,6 +12,7 @@ declare module "next-auth" {
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   secret: process.env.AUTH_SECRET,
+  trustHost: true,
   providers: [
     Discord({
       clientId: process.env.AUTH_DISCORD_CLIENT_ID,
