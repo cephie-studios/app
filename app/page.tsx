@@ -1,6 +1,8 @@
+'use client';
+
 import Background from './components/Background';
 import Button from './components/Button';
-import Image from 'next/image';
+import { products } from './data/products';
 
 export default function Home() {
 	return (
@@ -43,61 +45,14 @@ export default function Home() {
 						create innovative applications that enhance the aviation
 						experience for everyone.
 					</p>
-					<div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
-						<div className="p-6 border border-zinc-200 rounded-lg bg-zinc-50">
-							<Image
-								src="/assets/people/devbanane.avif"
-								alt="devbanane"
-								width={64}
-								height={64}
-								className="w-12 h-12 rounded-full mb-4 object-cover"
-							/>
-							<h3 className="font-semibold text-zinc-900">
-								devbanane
-							</h3>
-							<p className="mt-2 text-zinc-600">
-								Lead Developer and Founder of Cephie Studios,
-								passionate about creating innovative solutions
-								and a love for aviation.
-							</p>
-						</div>
-						<div className="p-6 border border-zinc-200 rounded-lg bg-zinc-50">
-							<Image
-								src="/assets/people/linuss.avif"
-								alt="Linus"
-								width={64}
-								height={64}
-								className="w-12 h-12 rounded-full mb-4 object-cover"
-							/>
-							<h3 className="font-semibold text-zinc-900">
-								Linus
-							</h3>
-							<p className="mt-2 text-zinc-600">
-								Lead Developer and Community Manager dedicated
-								to building strong connections and fostering
-								collaboration.
-							</p>
-						</div>
-						<div className="p-6 border border-zinc-200 rounded-lg bg-zinc-50">
-							<Image
-								src="/assets/people/emanuel.avif"
-								alt="Emanuel"
-								width={64}
-								height={64}
-								className="w-12 h-12 rounded-full mb-4 object-cover"
-							/>
-							<h3 className="font-semibold text-zinc-900">
-								Emanuel
-							</h3>
-							<p className="mt-2 text-zinc-600">
-								UI/UX Designer focused on creating intuitive and
-								engaging user experiences.
-							</p>
-						</div>
+					<div className="mt-10 flex flex-wrap gap-4">
+						<Button variant="primary" href="/team">
+							Meet the Team
+						</Button>
+						<Button variant="secondary" href="/apply">
+							Apply to Join
+						</Button>
 					</div>
-					<Button variant="primary" href="/apply" className="mt-10">
-						Apply to Join
-					</Button>
 				</div>
 			</section>
 
@@ -107,7 +62,7 @@ export default function Home() {
 			>
 				<div className="max-w-6xl w-full">
 					<h2 className="text-3xl text-zinc-900 sm:text-4xl font-montserrat">
-						Our flagship project
+						Our projects
 					</h2>
 					<p className="mt-6 text-lg leading-8 text-zinc-600 max-w-5xl">
 						Our most successful project yet is PFControl, an ATC
@@ -115,6 +70,22 @@ export default function Home() {
 						used by the community with over 7,500+ registered users
 						and 15,000+ flights tracked.
 					</p>
+					<div></div>
+					<div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+						{products.slice(0, 3).map((product) => (
+							<div
+								key={product.id}
+								className="p-6 bg-zinc-100 border border-zinc-200 rounded-lg"
+							>
+								<h3 className="text-xl font-semibold text-zinc-900 font-montserrat">
+									{product.name}
+								</h3>
+								<p className="mt-3 text-zinc-600">
+									{product.description}
+								</p>
+							</div>
+						))}
+					</div>
 					<div className="mt-10">
 						<Button variant="primary" href="/products">
 							View all Products

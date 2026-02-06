@@ -54,7 +54,7 @@ export default function Navbar() {
 							Products
 						</Link>
 						<Link
-							href="/#team"
+							href="/team"
 							className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
 						>
 							Team

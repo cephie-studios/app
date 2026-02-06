@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdLink } from 'react-icons/md';
 import Background from './Background';
 
@@ -80,8 +80,8 @@ export default function LegalPage({
 				</p>
 			</section>
 
-			<section className="flex flex-col py-12 bg-white w-full">
-				<div className="space-y-4">
+			<section className="flex flex-col py-12 pb-32 bg-white w-full">
+				<div className="max-w-4xl mx-auto w-full px-6 space-y-12">
 					{data.map((section, index) => {
 						const sectionId = slugify(section.title);
 						const isHighlighted = activeHash === `#${sectionId}`;
@@ -90,11 +90,13 @@ export default function LegalPage({
 							<div
 								key={index}
 								id={sectionId}
-								className={`w-full flex justify-center scroll-mt-24 transition-colors duration-500 ${
-									isHighlighted ? 'bg-blue-100/50' : ''
+								className={`scroll-mt-24 transition-colors duration-500 ${
+									isHighlighted
+										? 'bg-blue-100/50 -m-4 p-4 rounded-xl'
+										: ''
 								}`}
 							>
-								<div className="max-w-4xl w-full px-6 py-8 space-y-4 group">
+								<div className="space-y-4 group">
 									<div className="flex items-center gap-2">
 										<h2 className="text-2xl font-bold text-zinc-900 font-montserrat">
 											{section.title}

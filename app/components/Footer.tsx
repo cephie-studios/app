@@ -15,7 +15,7 @@ export default function Footer() {
 								height={40}
 								className="inline-block mr-1"
 							/>
-							<h3 className="text-sm font-semibold text-zinc-900 font-montserrat">
+							<h3 className="font-semibold text-zinc-900 font-montserrat">
 								Cephie Studios
 							</h3>
 						</div>
@@ -41,7 +41,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href="/#team"
+									href="/team"
 									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
 								>
 									Team
@@ -129,7 +129,7 @@ export default function Footer() {
 						reserved.
 					</p>
 					<div className="text-xs text-zinc-500 font-montserrat">
-						Designed and built by the Cephie Studios.
+						Designed and built by Cephie Studios.
 					</div>
 				</div>
 			</div>
