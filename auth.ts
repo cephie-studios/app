@@ -20,14 +20,24 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    async session({ session, token }) {
-      if (token.sub && session.user) {
-        session.user.id = token.sub
-        
-        const adminIds = (process.env.ADMIN_IDS || "").split(",").map(id => id.trim());
-        session.user.isAdmin = adminIds.includes(token.sub);
+    async jwt({ token, user, account }) {
+      const adminIds = (process.env.ADMIN_IDS || "").split(",").map(id => id.trim());
+      
+      if (user) {
+        token.id = user.id;
+        token.isAdmin = adminIds.includes(String(user.id));
+      } else if (token.sub) {
+        token.isAdmin = adminIds.includes(String(token.sub));
       }
-      return session
+      
+      return token;
+    },
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = (token.id || token.sub) as string;
+        session.user.isAdmin = !!token.isAdmin;
+      }
+      return session;
     },
     async signIn({ user, account, profile }) {
       const adminIds = (process.env.ADMIN_IDS || "").split(",").map(id => id.trim());
@@ -35,10 +45,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       
       console.log("SignIn Attempt:", { 
         userId, 
+        isAdmin: userId ? adminIds.includes(String(userId)) : false,
         adminIds, 
         provider: account?.provider,
-        providerAccountId: account?.providerAccountId,
-        userIdFromUser: user.id
       });
 
       if (userId && adminIds.includes(String(userId))) {
