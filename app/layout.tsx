@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 		title: 'Cephie Studios',
 		description:
 			'We create applications and build thriving communities. Our flagship project PFControl powers ATC management for Project Flight.',
-		images: ['/assets/icons/cephie-clean.avif']
+		images: ['/assets/icons/cephie.avif']
 	},
 	icons: {
 		icon: '/favicon.ico'
