@@ -68,6 +68,9 @@ export const metadata: Metadata = {
 	robots: {
 		index: true,
 		follow: true
+	},
+	other: {
+		'google-adsense-account': 'ca-pub-3075420086521736'
 	}
 };
 
