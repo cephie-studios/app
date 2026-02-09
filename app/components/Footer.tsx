@@ -39,22 +39,22 @@ export default function Footer() {
 									Products
 								</Link>
 							</li>
-							<li>
-								<Link
-									href="/team"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Team
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/apply"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Apply
-								</Link>
-							</li>
+  					<li>
+  						<Link
+  							href="/team"
+  							className="text-zinc-600 hover:text-zinc-900 font-montserrat"
+  						>
+  							Team
+  						</Link>
+  					</li>
+  					<li>
+  						<Link
+  							href="/apply"
+  							className="text-zinc-600 hover:text-zinc-900 font-montserrat"
+  						>
+  							Apply
+  						</Link>
+  					</li>
 							<li>
 								<Link
 									href="https://dash.cephie.app"
@@ -129,6 +129,14 @@ export default function Footer() {
 									GitHub
 								</a>
 							</li>
+                            <li>
+                                <Link
+                                    href="/assets"
+                                    className="text-zinc-600 hover:text-zinc-900 font-montserrat"
+                                >
+                                    Assets
+                                </Link>
+                            </li>
 						</ul>
 					</div>
 				</div>
