@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Background from '../components/Background';
-import Button from '../components/Button';
+import { Background } from '@cephie-studios/ui';
+import { Button } from '@cephie-studios/ui';
 import Dropdown from '../components/Dropdown';
 import {
 	MdSend,

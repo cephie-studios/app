@@ -1,7 +1,7 @@
 'use client';
 
-import Background from '../components/Background';
-import Button from '../components/Button';
+import { Background } from '@cephie-studios/ui';
+import { Button } from '@cephie-studios/ui';
 import { products } from '../data/products';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 

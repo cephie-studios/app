@@ -1,7 +1,7 @@
 'use client';
 
-import Background from './components/Background';
-import Button from './components/Button';
+import { Background } from '@cephie-studios/ui';
+import { Button } from '@cephie-studios/ui';
 import { products } from './data/products';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 					innovative areas.
 				</p>
 				<div className="mt-10 flex items-center justify-center gap-x-4 z-10">
-					<Button variant="primary" href="/products">
+					<Button variant="primary" href="/products" mode="light">
 						Our Products
 					</Button>
 					<Button

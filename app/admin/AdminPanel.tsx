@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { MdAdd, MdDelete, MdSave, MdLogout } from 'react-icons/md';
 import { signOut } from 'next-auth/react';
-import Button from '../components/Button';
+import { Button } from '@cephie-studios/ui';
 
 interface Subsection {
 	title: string;
@@ -16,8 +16,20 @@ interface LegalSection {
 	subsections?: Subsection[];
 }
 
-export default function AdminPanel({ user, initialData }: { user: { name?: string | null, email?: string | null, image?: string | null }, initialData: Record<string, LegalSection[]> }) {
-	const [activeTab, setActiveTab] = useState<string>(Object.keys(initialData)[0] || 'terms');
+export default function AdminPanel({
+	user,
+	initialData
+}: {
+	user: {
+		name?: string | null;
+		email?: string | null;
+		image?: string | null;
+	};
+	initialData: Record<string, LegalSection[]>;
+}) {
+	const [activeTab, setActiveTab] = useState<string>(
+		Object.keys(initialData)[0] || 'terms'
+	);
 	const [data, setData] = useState<LegalSection[]>([]);
 	const [isSaving, setIsSaving] = useState(false);
 	const [message, setMessage] = useState<{
@@ -150,15 +162,17 @@ export default function AdminPanel({ user, initialData }: { user: { name?: strin
 				)}
 
 				<div className="flex border-b border-zinc-200 overflow-x-auto">
-					{Object.keys(initialData).sort().map(tab => (
-						<button
-							key={tab}
-							onClick={() => setActiveTab(tab)}
-							className={`px-6 py-3 font-semibold transition-colors border-b-2 whitespace-nowrap capitalize ${activeTab === tab ? 'border-blue-600 text-blue-600' : 'border-transparent text-zinc-500 hover:text-zinc-700'}`}
-						>
-							{tab.replace(/-/g, ' ')}
-						</button>
-					))}
+					{Object.keys(initialData)
+						.sort()
+						.map((tab) => (
+							<button
+								key={tab}
+								onClick={() => setActiveTab(tab)}
+								className={`px-6 py-3 font-semibold transition-colors border-b-2 whitespace-nowrap capitalize ${activeTab === tab ? 'border-blue-600 text-blue-600' : 'border-transparent text-zinc-500 hover:text-zinc-700'}`}
+							>
+								{tab.replace(/-/g, ' ')}
+							</button>
+						))}
 				</div>
 
 				<div className="space-y-6">
@@ -171,9 +185,7 @@ export default function AdminPanel({ user, initialData }: { user: { name?: strin
 
 					{data.map((section, idx) => (
 						<div key={idx} className="space-y-6">
-							<div
-								className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm space-y-4"
-							>
+							<div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm space-y-4">
 								<div className="flex justify-between gap-4">
 									<input
 										value={section.title}

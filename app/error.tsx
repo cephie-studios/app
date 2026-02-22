@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-import Background from './components/Background';
+import { Background } from '@cephie-studios/ui';
 
 export default function Error({
 	error,
-	reset,
+	reset
 }: {
 	error: Error & { digest?: string };
 	reset: () => void;

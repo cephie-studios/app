@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdLink } from 'react-icons/md';
-import Background from './Background';
+import { Background } from '@cephie-studios/ui';
 
 interface Subsection {
 	title: string;

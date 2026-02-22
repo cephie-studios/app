@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { team } from '../data/team';
-import Button from '../components/Button';
+import { Button } from '@cephie-studios/ui';
 import { FaGithub, FaLinkedin, FaGlobe, FaDiscord } from 'react-icons/fa';
 
 export default function Team() {

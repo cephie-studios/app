@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from './Button';
+import { Button } from '@cephie-studios/ui';
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
