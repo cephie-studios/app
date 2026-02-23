@@ -1,156 +1,45 @@
-import Link from 'next/link';
-import Image from 'next/image';
+'use client';
+
+import {
+	Footer as FooterContainer,
+	FooterLinkHeader,
+	FooterLink
+} from 'cephie-ui';
 
 export default function Footer() {
 	return (
-		<footer className="bg-white border-t border-zinc-200">
-			<div className="max-w-7xl mx-auto px-6 py-12">
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-					<div>
-						<div className="flex items-center mb-4">
-							<Image
-								src="/assets/icons/cephie-clean.avif"
-								alt="Icon"
-								width={40}
-								height={40}
-								className="inline-block mr-1"
-							/>
-							<h3 className="font-semibold text-zinc-900 font-montserrat">
-								Cephie Studios
-							</h3>
-						</div>
-						<p className="text-sm text-zinc-600 font-montserrat">
-							Building tools that empower aviation communities.
-						</p>
-					</div>
-
-					<div></div>
-
-					<div>
-						<h4 className="text-sm font-semibold text-zinc-900 font-montserrat mb-3">
-							Company
-						</h4>
-						<ul className="space-y-2 text-sm">
-							<li>
-								<Link
-									href="/products"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Products
-								</Link>
-							</li>
-  					<li>
-  						<Link
-  							href="/team"
-  							className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-  						>
-  							Team
-  						</Link>
-  					</li>
-  					<li>
-  						<Link
-  							href="/apply"
-  							className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-  						>
-  							Apply
-  						</Link>
-  					</li>
-							<li>
-								<Link
-									href="https://dash.cephie.app"
-									rel="noopener noreferrer"
-									target="_blank"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Dashboard
-								</Link>
-							</li>
-						</ul>
-					</div>
-
-					<div>
-						<h4 className="text-sm font-semibold text-zinc-900 font-montserrat mb-3">
-							Legal
-						</h4>
-						<ul className="space-y-2 text-sm">
-							<li>
-								<Link
-									href="/legal/terms"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Terms of Service
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/legal/privacy"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Privacy Policy
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/legal/cookies"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Cookie Policy
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/legal"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									All Legal
-								</Link>
-							</li>
-						</ul>
-					</div>
-
-					<div>
-						<h4 className="text-sm font-semibold text-zinc-900 font-montserrat mb-3">
-							Connect
-						</h4>
-						<ul className="space-y-2 text-sm">
-							<li>
-								<a
-									href="https://cephie.app/discord"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									Discord
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://cephie.app/github"
-									className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-								>
-									GitHub
-								</a>
-							</li>
-                            <li>
-                                <Link
-                                    href="/assets"
-                                    className="text-zinc-600 hover:text-zinc-900 font-montserrat"
-                                >
-                                    Assets
-                                </Link>
-                            </li>
-						</ul>
-					</div>
-				</div>
-
-				<div className="mt-10 pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-					<p className="text-xs text-zinc-500 font-montserrat">
-						© {new Date().getFullYear()} Cephie Studios. All rights
-						reserved.
-					</p>
-					<div className="text-xs text-zinc-500 font-montserrat">
-						Designed and built by Cephie Studios.
-					</div>
-				</div>
-			</div>
-		</footer>
+		<FooterContainer
+			mode="light"
+			title="Cephie Studios"
+			subtitle="Building tools that empower aviation communities."
+			iconLight="/assets/icons/cephie-clean.avif"
+			iconDark="/assets/icons/cephie-clean.avif"
+			copyright={`© ${new Date().getFullYear()} Cephie Studios. All rights reserved.`}
+			bottomRight="Designed and built by Cephie Studios."
+		>
+			<FooterLinkHeader title="Company">
+				<FooterLink href="/products">Products</FooterLink>
+				<FooterLink href="/team">Team</FooterLink>
+				<FooterLink href="/apply">Apply</FooterLink>
+				<FooterLink href="https://dash.cephie.app" newTab>
+					Dashboard
+				</FooterLink>
+			</FooterLinkHeader>
+			<FooterLinkHeader title="Legal">
+				<FooterLink href="/legal/terms">Terms of Service</FooterLink>
+				<FooterLink href="/legal/privacy">Privacy Policy</FooterLink>
+				<FooterLink href="/legal/cookies">Cookie Policy</FooterLink>
+				<FooterLink href="/legal">All Legal</FooterLink>
+			</FooterLinkHeader>
+			<FooterLinkHeader title="Connect">
+				<FooterLink href="https://cephie.app/discord" newTab>
+					Discord
+				</FooterLink>
+				<FooterLink href="https://cephie.app/github" newTab>
+					GitHub
+				</FooterLink>
+				<FooterLink href="/assets">Assets</FooterLink>
+			</FooterLinkHeader>
+		</FooterContainer>
 	);
 }

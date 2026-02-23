@@ -9,7 +9,7 @@ export default function ProductsPage() {
 	return (
 		<div className="flex flex-col min-h-screen bg-white">
 			<section className="relative flex flex-col items-center justify-center py-20 px-6 pt-32 text-center border-b border-zinc-200 overflow-hidden">
-				<Background />
+				<Background mode="light" />
 				<h1 className="text-4xl tracking-tight text-zinc-900 sm:text-6xl font-montserrat z-10">
 					Our Products
 				</h1>
@@ -54,6 +54,7 @@ export default function ProductsPage() {
 
 								<div className="flex items-center gap-4">
 									<Button
+										mode="light"
 										variant="primary"
 										href={product.link}
 										newTab
@@ -64,6 +65,7 @@ export default function ProductsPage() {
 									</Button>
 									{product.github && (
 										<Button
+											mode="light"
 											variant="secondary"
 											href={product.github}
 											newTab
@@ -94,15 +96,15 @@ export default function ProductsPage() {
 						<Button
 							variant="secondary"
 							href="https://cephie.app/discord"
-							newTab={true}
-							className="bg-white text-zinc-950 hover:bg-zinc-100 w-full sm:w-auto"
+							newTab
+							className="w-full sm:w-auto"
 						>
 							Join our Discord
 						</Button>
 						<Button
 							variant="primary"
 							href="/apply"
-							className="border border-zinc-800 w-full sm:w-auto"
+							className="w-full sm:w-auto"
 						>
 							Apply to Join
 						</Button>

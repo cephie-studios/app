@@ -48,7 +48,7 @@ export default function LegalSelectionPage() {
 	return (
 		<div className="flex flex-col min-h-screen bg-white">
 			<section className="relative flex flex-col items-center justify-center py-20 px-6 pt-32 text-center border-b border-zinc-200 overflow-hidden">
-				<Background />
+				<Background mode="light" />
 				<h1 className="text-4xl tracking-tight text-zinc-900 sm:text-6xl font-montserrat">
 					Legal Documents
 				</h1>

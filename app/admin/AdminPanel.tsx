@@ -136,6 +136,7 @@ export default function AdminPanel({
 					</div>
 					<div className="flex gap-4">
 						<Button
+							mode="light"
 							variant="secondary"
 							onClick={() => signOut()}
 							className="flex items-center gap-2"
@@ -143,6 +144,7 @@ export default function AdminPanel({
 							<MdLogout /> Logout
 						</Button>
 						<Button
+							mode="light"
 							variant="primary"
 							onClick={handleSave}
 							disabled={isSaving}

@@ -1,7 +1,6 @@
-import { auth, signIn } from '@/auth';
+import { auth } from '@/auth';
 import AdminPanel from './AdminPanel';
-import { Background } from 'cephie-ui';
-import { Button } from 'cephie-ui';
+import AdminLoginForm from './AdminLoginForm';
 import fs from 'fs';
 import path from 'path';
 
@@ -9,30 +8,7 @@ export default async function AdminPage() {
 	const session = await auth();
 
 	if (!session?.user?.isAdmin) {
-		return (
-			<div className="flex flex-col items-center justify-center min-h-screen bg-white relative overflow-hidden">
-				<Background />
-				<div className="z-10 text-center space-y-6 p-8">
-					<h1 className="text-3xl font-bold text-zinc-900 font-montserrat">
-						Admin Panel
-					</h1>
-					<p className="text-zinc-600 mb-4">
-						{session &&
-							'You do not have permission to access this page.'}
-					</p>
-					<form
-						action={async () => {
-							'use server';
-							await signIn('discord');
-						}}
-					>
-						<Button type="submit">
-							{session ? 'Switch Account' : 'Login with Discord'}
-						</Button>
-					</form>
-				</div>
-			</div>
-		);
+		return <AdminLoginForm hasSession={!!session} />;
 	}
 
 	interface LegalSection {

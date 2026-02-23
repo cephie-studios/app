@@ -108,13 +108,15 @@ export default function AssetsPage() {
 
 							<div className="flex gap-4 mt-auto">
 								<Button
+									mode="light"
 									href={`/${file}`}
-									newTab={true}
+									newTab
 									className="px-4! py-2! rounded-xl! text-xs!"
 								>
 									View Full
 								</Button>
 								<Button
+									mode="light"
 									onClick={() => {
 										navigator.clipboard.writeText(
 											`${window.location.origin}/${file}`

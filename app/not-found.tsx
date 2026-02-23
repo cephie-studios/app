@@ -5,7 +5,7 @@ import { Background } from 'cephie-ui';
 export default function NotFound() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen bg-white relative overflow-hidden">
-			<Background />
+			<Background mode="light" />
 			<div className="z-10 text-center space-y-6 p-8">
 				<h1 className="text-3xl font-bold text-zinc-900 font-montserrat">
 					404 - Page Not Found

@@ -2,9 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Background } from 'cephie-ui';
-import { Button } from 'cephie-ui';
-import Dropdown from '../components/Dropdown';
+import { Button, Background } from 'cephie-ui';
 import {
 	MdSend,
 	MdPerson,
@@ -15,6 +13,7 @@ import {
 	MdHistory
 } from 'react-icons/md';
 import { FaDiscord } from 'react-icons/fa';
+import Dropdown from '../components/Dropdown';
 
 export default function ApplyPage() {
 	const [formData, setFormData] = useState({
@@ -85,7 +84,7 @@ export default function ApplyPage() {
 		return (
 			<div className="flex flex-col min-h-screen bg-white">
 				<section className="relative flex flex-col items-center justify-center py-32 px-6 text-center overflow-hidden grow">
-					<Background />
+					<Background mode="light" />
 					<div className="z-10 p-12 rounded-3xl border border-zinc-200 shadow-xl max-w-xl w-full">
 						<div className="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 pl-1.5 text-3xl -rotate-45">
 							<MdSend />
@@ -100,6 +99,7 @@ export default function ApplyPage() {
 							or Inbox for any updates!
 						</p>
 						<Button
+							mode="light"
 							variant="primary"
 							onClick={() => router.push('/')}
 							className="w-full"
@@ -115,7 +115,7 @@ export default function ApplyPage() {
 	return (
 		<div className="flex flex-col min-h-screen bg-white">
 			<section className="relative flex flex-col items-center justify-center py-20 px-6 pt-32 text-center border-b border-zinc-200 overflow-hidden">
-				<Background />
+				<Background mode="light" />
 				<h1 className="text-4xl tracking-tight text-zinc-900 sm:text-6xl font-montserrat z-10">
 					Join the Team
 				</h1>
@@ -240,6 +240,7 @@ export default function ApplyPage() {
 									icon={<MdWork className="w-4 h-4" />}
 									required
 									value={formData.role}
+									className="h-16"
 									onChange={(e) =>
 										handleChange({
 											target: {
@@ -330,6 +331,7 @@ export default function ApplyPage() {
 
 							<div className="pt-4 pb-12">
 								<Button
+									mode="light"
 									type="submit"
 									variant="primary"
 									disabled={loading}

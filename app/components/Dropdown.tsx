@@ -104,9 +104,9 @@ export default function Dropdown({
 									key={option.value}
 									type="button"
 									onClick={() => handleSelect(option.value)}
-									className={`w-full px-5 py-3 text-left font-montserrat transition-colors hover:bg-zinc-50 flex items-center justify-between ${
+									className={`w-full px-5 py-3 text-left font-montserrat transition-colors hover:bg-zinc-100 flex items-center justify-between ${
 										option.value === value
-											? 'text-blue-600 bg-blue-50/50'
+											? 'text-blue-600 bg-blue-100/50'
 											: 'text-zinc-700'
 									}`}
 									role="option"

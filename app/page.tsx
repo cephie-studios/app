@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<div className="flex flex-col min-h-screen bg-white">
 			<section className="relative flex flex-col items-center justify-center h-[70vh] max-h-[70vh] px-6 text-center border-b border-zinc-200 overflow-hidden">
-				<Background />
+				<Background mode="light" />
 				<h1 className="text-4xl tracking-tight text-zinc-900 sm:text-6xl font-montserrat">
 					Cephie Studios
 				</h1>
@@ -18,13 +18,14 @@ export default function Home() {
 					innovative areas.
 				</p>
 				<div className="mt-10 flex items-center justify-center gap-x-4 z-10">
-					<Button variant="primary" href="/products" mode="light">
+					<Button mode="light" variant="primary" href="/products">
 						Our Products
 					</Button>
 					<Button
+						mode="light"
 						variant="secondary"
 						href="https://cephie.app/discord"
-						newTab={true}
+						newTab
 					>
 						Join our Discord
 					</Button>
@@ -48,9 +49,10 @@ export default function Home() {
 					</p>
 					<div className="mt-10 flex flex-wrap gap-4">
 						<Button
+							mode="light"
 							variant="primary"
 							href="https://dash.cephie.app"
-							newTab={true}
+							newTab
 						>
 							Dashboard
 						</Button>
@@ -73,10 +75,10 @@ export default function Home() {
 						experience for everyone.
 					</p>
 					<div className="mt-10 flex flex-wrap gap-4">
-						<Button variant="primary" href="/team">
+						<Button mode="light" variant="primary" href="/team">
 							Meet the Team
 						</Button>
-						<Button variant="secondary" href="/apply">
+						<Button mode="light" variant="secondary" href="/apply">
 							Apply to Join
 						</Button>
 					</div>
@@ -114,7 +116,7 @@ export default function Home() {
 						))}
 					</div>
 					<div className="mt-10">
-						<Button variant="primary" href="/products">
+						<Button mode="light" variant="primary" href="/products">
 							View all Products
 						</Button>
 					</div>
@@ -136,7 +138,7 @@ export default function Home() {
 						information.
 					</p>
 					<div className="mt-10">
-						<Button variant="primary" href="/legal">
+						<Button mode="light" variant="primary" href="/legal">
 							View Legal Information
 						</Button>
 					</div>
@@ -157,15 +159,15 @@ export default function Home() {
 						<Button
 							variant="secondary"
 							href="https://cephie.app/discord"
-							newTab={true}
-							className="bg-white text-zinc-950 hover:bg-zinc-100 w-full sm:w-auto"
+							newTab
+							className="w-full sm:w-auto"
 						>
 							Join our Discord
 						</Button>
 						<Button
 							variant="primary"
 							href="/apply"
-							className="border border-zinc-800 w-full sm:w-auto"
+							className="w-full sm:w-auto"
 						>
 							Apply to Join
 						</Button>
