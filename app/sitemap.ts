@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://cephie.app';
 	const now = new Date();
 	const staticRoutes = ['', '/products', '/team', '/apply', '/legal'];
-	const legalDocs = ['/terms', '/privacy', '/cookies', '/pfcontrol', '/pfconnect'];
+	const legalDocs = ['/terms', '/privacy', '/cookies', '/pfcontrol', '/pfconnect', '/snap'];
 
 	const staticEntries = staticRoutes.map((route) => ({
 		url: `${base}${route}`,

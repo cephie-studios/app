@@ -19,6 +19,7 @@ function getTitle(slug: string) {
 		pfconnect: 'PFConnect Terms & Policies',
 		pfcontrol: 'PFControl Terms & Policies',
 		privacy: 'Privacy Policy',
+		snap: 'Cephie Snap',
 		terms: 'Terms of Use'
 	};
 	return titles[slug] || slug.charAt(0).toUpperCase() + slug.slice(1);

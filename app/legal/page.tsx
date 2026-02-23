@@ -42,6 +42,13 @@ export default function LegalSelectionPage() {
 			description: 'Specific terms and policies related to PFConnect.',
 			href: '/legal/pfconnect',
 			icon: <MdDescription className="w-8 h-8 text-blue-500" />
+		},
+		{
+			title: 'Cephie Snap',
+			description:
+				'Terms, privacy, and cookies for Cephie Snap image sharing.',
+			href: '/legal/snap',
+			icon: <MdDescription className="w-8 h-8 text-blue-500" />
 		}
 	];
 
