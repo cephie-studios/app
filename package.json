@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "cephie-ui": "^1.3.10",
+    "cephie-ui": "^1.3.11",
     "next": "16.1.6",
     "next-auth": "^5.0.0-beta.30",
     "react": "19.2.3",
