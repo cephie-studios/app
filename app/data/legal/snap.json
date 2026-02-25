@@ -1,86 +1,86 @@
 [
-    {
-        "title": "1. Introduction",
-        "content": "Welcome to Cephie Snap. By using our service, you agree to these Terms of Service. If you do not agree, please do not use Cephie Snap."
-    },
-    {
-        "title": "Important",
-        "content": "All images you upload are publicly accessible. Don't share anything you wouldn't want to be public."
-    },
-    {
-        "title": "2. Usage",
-        "content": "Cephie Snap allows you to upload and share images. You are responsible for the content you upload. You must not upload, share, or distribute any images that are illegal, NSFW, offensive, or violate copyright or intellectual property rights."
-    },
-    {
-        "title": "3. Account",
-        "content": "You must sign in using Clerk to use certain features. You are responsible for maintaining the security of your account."
-    },
-    {
-        "title": "4. Prohibited Content",
-        "content": "Uploading or sharing prohibited content (including but not limited to NSFW, violent, hateful, or illegal material) will result in immediate account suspension or ban. We reserve the right to remove any content and ban users at our discretion."
-    },
-    {
-        "title": "5. Limitation of Liability",
-        "content": "Cephie Snap is provided \"as is\" without warranties. We are not liable for any damages, losses, or claims arising from your use of the service."
-    },
-    {
-        "title": "6. Changes",
-        "content": "We may update these Terms at any time. Continued use of Cephie Snap means you accept any changes."
-    },
-    {
-        "title": "7. Data Collection (Privacy)",
-        "content": "Cephie Snap values your privacy. We collect and use data as follows:",
-        "subsections": [
-            {
-                "title": "Authentication",
-                "content": "We use Clerk for authentication. Clerk may collect your email, name, and other profile information. See Clerk's own privacy policy for details."
-            },
-            {
-                "title": "Uploads",
-                "content": "When you upload images, we store the image URLs and timestamps linked to your Clerk user ID."
-            },
-            {
-                "title": "API Logs",
-                "content": "API calls are logged (API key, route, method, timestamp, and outcome) for security and analytics."
-            }
-        ]
-    },
-    {
-        "title": "8. Use of Data",
-        "content": "Your images and account info are used only to provide Cephie Snap services. We do not sell or share your data with third parties except as required by law."
-    },
-    {
-        "title": "9. Cookies",
-        "content": "We use cookies for authentication (via Clerk) and to improve user experience. See our Cookies Policy for details."
-    },
-    {
-        "title": "10. Your Rights",
-        "content": "You can request deletion of your images at any time. For account data managed by Clerk, please refer to Clerk's privacy controls."
-    },
-    {
-        "title": "11. Cookies Policy",
-        "content": "Cephie Snap uses cookies to provide and improve our service.",
-        "subsections": [
-            {
-                "title": "What Are Cookies?",
-                "content": "Cookies are small text files stored on your device. They help us remember your preferences and keep you signed in."
-            },
-            {
-                "title": "How We Use Cookies",
-                "content": "Authentication: Clerk uses cookies to manage your login session. Preferences: We may use cookies to remember your theme (dark/light mode) and other settings."
-            },
-            {
-                "title": "Third-Party Cookies",
-                "content": "Clerk may set cookies for authentication. Please refer to Clerk's documentation for details."
-            },
-            {
-                "title": "Managing Cookies",
-                "content": "You can control cookies in your browser settings. Disabling cookies may affect your ability to use Cephie Snap."
-            }
-        ]
-    },
-    {
-        "title": "12. Policy Changes",
-        "content": "We may update our privacy and cookie policies. Continued use means you accept any changes."
-    }
+  {
+    "title": "1. Introduction",
+    "content": "Welcome to Cephie Snap. By using our service, you agree to these Terms of Service. If you do not agree, please do not use Cephie Snap."
+  },
+  {
+    "title": "Important",
+    "content": "All images you upload are publicly accessible. Don't share anything you wouldn't want to be public."
+  },
+  {
+    "title": "2. Usage",
+    "content": "Cephie Snap allows you to upload and share images. You are responsible for the content you upload. You must not upload, share, or distribute any images that are illegal, NSFW, offensive, or violate copyright or intellectual property rights."
+  },
+  {
+    "title": "3. Account",
+    "content": "You must sign in with Discord to use Cephie Snap (upload, manage images, albums, and view your limits). You are responsible for maintaining the security of your Discord account. We do not store your Discord password; authentication is handled by Discord OAuth."
+  },
+  {
+    "title": "4. Plans and limits",
+    "content": "Cephie Snap offers Standard (free), Premium, and Ultimate plans. Standard: up to 100 images stored, up to 10 images per upload. Premium and Ultimate are granted on request and have higher storage and upload limits. Plan boundaries (e.g. image caps, custom URLs, albums) are enforced by our systems. We may change plan limits with notice."
+  },
+  {
+    "title": "5. Prohibited Content",
+    "content": "Uploading or sharing prohibited content (including but not limited to NSFW, violent, hateful, or illegal material) will result in immediate account suspension or ban. We reserve the right to remove any content and ban users at our discretion."
+  },
+  {
+    "title": "6. Limitation of Liability",
+    "content": "Cephie Snap is provided \"as is\" without warranties. We are not liable for any damages, losses, or claims arising from your use of the service."
+  },
+  {
+    "title": "7. Changes",
+    "content": "We may update these Terms at any time. Continued use of Cephie Snap means you accept any changes."
+  },
+  {
+    "title": "8. Data Collection (Privacy)",
+    "content": "Cephie Snap values your privacy. We collect and use data as follows:",
+    "subsections": [
+      {
+        "title": "Authentication",
+        "content": "You sign in with Discord. We receive your Discord user ID, username, and avatar from Discord's OAuth. We do not receive or store your Discord password. See Discord's privacy policy for how Discord handles your data."
+      },
+      {
+        "title": "Uploads",
+        "content": "When you upload images, we store the image data and metadata (URLs, timestamps) linked to your Discord user ID. Premium and Ultimate users may use custom URLs tied to their Discord username."
+      },
+      {
+        "title": "API and usage",
+        "content": "API calls may be logged (route, method, timestamp, outcome) for security, abuse prevention, and analytics. We do not sell your data."
+      }
+    ]
+  },
+  {
+    "title": "9. Use of Data",
+    "content": "Your images and account info are used only to provide Cephie Snap services (storage, delivery, albums, limits). We do not sell or share your data with third parties except as required by law or to operate the service (e.g. Discord for sign-in)."
+  },
+  {
+    "title": "10. Cookies",
+    "content": "We use cookies for authentication (to keep you signed in via your session) and to improve user experience. See our Cookies section below for details."
+  },
+  {
+    "title": "11. Your Rights",
+    "content": "You can delete your images at any time from the Cephie Snap interface. For data held by Discord, refer to Discord's privacy and account controls. You may contact us to request deletion of data we hold that is tied to your account."
+  },
+  {
+    "title": "12. Cookies",
+    "content": "Cephie Snap uses cookies to provide and improve the service.",
+    "subsections": [
+      {
+        "title": "What we use",
+        "content": "Session cookies keep you signed in after you authenticate with Discord. We may use cookies for preferences (e.g. theme) and security."
+      },
+      {
+        "title": "Third-party",
+        "content": "Discord's OAuth may set or read cookies as part of the sign-in flow. See Discord's documentation for details."
+      },
+      {
+        "title": "Managing cookies",
+        "content": "You can control cookies in your browser settings. Disabling or blocking cookies may affect your ability to sign in or use Cephie Snap."
+      }
+    ]
+  },
+  {
+    "title": "13. Policy changes",
+    "content": "We may update our privacy and cookie policies. Continued use means you accept the current versions."
+  }
 ]

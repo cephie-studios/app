@@ -34,8 +34,7 @@ export const metadata: Metadata = {
 		'Project Flight',
 		'aviation software',
 		'ATC management',
-		'community tools',
-		'Next.js apps'
+		'community tools'
 	],
 	authors: [{ name: 'Cephie Studios' }],
 	creator: 'Cephie Studios',
