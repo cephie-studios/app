@@ -13,6 +13,17 @@ export async function generateStaticParams() {
 		}));
 }
 
+const LAST_UPDATED_BY_SLUG: { [key: string]: string } = {
+	cookies: 'February 5, 2026',
+	pfconnect: 'February 5, 2026',
+	pfcontrol: 'February 5, 2026',
+	privacy: 'February 5, 2026',
+	snap: 'February 26, 2026',
+	terms: 'February 5, 2026'
+};
+
+const DEFAULT_LAST_UPDATED = 'February 5, 2026';
+
 function getTitle(slug: string) {
 	const titles: { [key: string]: string } = {
 		cookies: 'Cookie Policy',
@@ -40,10 +51,12 @@ export default async function LegalDynamicPage({
 	const fileContent = fs.readFileSync(filePath, 'utf8');
 	const data = JSON.parse(fileContent);
 
+	const lastUpdated = LAST_UPDATED_BY_SLUG[slug] ?? DEFAULT_LAST_UPDATED;
+
 	return (
 		<LegalPage
 			title={getTitle(slug)}
-			lastUpdated="February 5, 2026"
+			lastUpdated={lastUpdated}
 			data={data}
 		/>
 	);

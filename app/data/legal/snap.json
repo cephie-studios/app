@@ -1,68 +1,104 @@
 [
   {
     "title": "1. Introduction",
-    "content": "Welcome to Cephie Snap. By using our service, you agree to these Terms of Service. If you do not agree, please do not use Cephie Snap."
+    "content": "Welcome to Cephie Snap. By using our service, you agree to these Terms of Service and our privacy and cookie practices described below. If you do not agree, please do not use Cephie Snap."
   },
   {
     "title": "Important",
-    "content": "All images you upload are publicly accessible. Don't share anything you wouldn't want to be public."
+    "content": "All images you upload are publicly accessible. Do not share anything you would not want to be public."
   },
   {
     "title": "2. Usage",
-    "content": "Cephie Snap allows you to upload and share images. You are responsible for the content you upload. You must not upload, share, or distribute any images that are illegal, NSFW, offensive, or violate copyright or intellectual property rights."
+    "content": "Cephie Snap allows you to upload and share images. You are responsible for the content you upload. You must not upload, share, or distribute any images that are illegal, NSFW, offensive, or that violate copyright or intellectual property rights."
   },
   {
     "title": "3. Account",
-    "content": "You must sign in with Discord to use Cephie Snap (upload, manage images, albums, and view your limits). You are responsible for maintaining the security of your Discord account. We do not store your Discord password; authentication is handled by Discord OAuth."
+    "content": "You must sign in with Discord to use Cephie Snap (upload, manage images, albums, view limits, and manage subscriptions). We use Discord OAuth for authentication and may request your email scope so we can associate your account with payment and subscription records (e.g. for Stripe). You are responsible for maintaining the security of your Discord account. We do not store your Discord password; authentication is handled by Discord."
   },
   {
     "title": "4. Plans and limits",
-    "content": "Cephie Snap offers Standard (free), Premium, and Ultimate plans. Standard: up to 100 images stored, up to 10 images per upload. Premium and Ultimate are granted on request and have higher storage and upload limits. Plan boundaries (e.g. image caps, custom URLs, albums) are enforced by our systems. We may change plan limits with notice."
-  },
-  {
-    "title": "5. Prohibited Content",
-    "content": "Uploading or sharing prohibited content (including but not limited to NSFW, violent, hateful, or illegal material) will result in immediate account suspension or ban. We reserve the right to remove any content and ban users at our discretion."
-  },
-  {
-    "title": "6. Limitation of Liability",
-    "content": "Cephie Snap is provided \"as is\" without warranties. We are not liable for any damages, losses, or claims arising from your use of the service."
-  },
-  {
-    "title": "7. Changes",
-    "content": "We may update these Terms at any time. Continued use of Cephie Snap means you accept any changes."
-  },
-  {
-    "title": "8. Data Collection (Privacy)",
-    "content": "Cephie Snap values your privacy. We collect and use data as follows:",
+    "content": "Cephie Snap offers the following plans. Plan boundaries (storage, upload concurrency, custom URLs, albums, and other features) are enforced by our systems. We may change plan limits or pricing with reasonable notice.",
     "subsections": [
       {
-        "title": "Authentication",
-        "content": "You sign in with Discord. We receive your Discord user ID, username, and avatar from Discord's OAuth. We do not receive or store your Discord password. See Discord's privacy policy for how Discord handles your data."
+        "title": "Free plan",
+        "content": "The free plan includes a limited number of images stored, limited simultaneous uploads, and permanent URLs. It does not include premium features such as custom URLs, albums, or premium badge. Free plan limits are published on the Cephie Snap pricing page."
       },
       {
-        "title": "Uploads",
-        "content": "When you upload images, we store the image data and metadata (URLs, timestamps) linked to your Discord user ID. Premium and Ultimate users may use custom URLs tied to their Discord username."
+        "title": "Lite, Premium, and Ultimate",
+        "content": "Paid plans (Lite, Premium, Ultimate) are available by subscription through Stripe. Pricing and features are shown on the pricing page. You subscribe by signing in and completing checkout; your subscription recurs according to the plan you choose. You can upgrade, change, or cancel your subscription via the Stripe Customer Portal (Manage subscription)."
       },
       {
-        "title": "API and usage",
-        "content": "API calls may be logged (route, method, timestamp, outcome) for security, abuse prevention, and analytics. We do not sell your data."
+        "title": "Complimentary (comp) plans",
+        "content": "We or our administrators may grant complimentary access to Lite, Premium, or Ultimate for certain users. Comp access is subject to the same usage and conduct rules. If you were granted a comp plan and later wish to upgrade or add payment, you may do so through the normal checkout and subscription flow; we may associate your account with a new Stripe customer if needed."
       }
     ]
   },
   {
-    "title": "9. Use of Data",
-    "content": "Your images and account info are used only to provide Cephie Snap services (storage, delivery, albums, limits). We do not sell or share your data with third parties except as required by law or to operate the service (e.g. Discord for sign-in)."
+    "title": "5. Payments and subscriptions",
+    "content": "Paid plans are billed through Stripe. By subscribing, you agree to Stripe's terms and our billing practices below.",
+    "subsections": [
+      {
+        "title": "Billing",
+        "content": "Subscription fees are charged in advance according to the billing cycle of your plan (e.g. monthly or annually). Payment methods are managed in the Stripe Customer Portal. You are responsible for keeping your payment information current; failed payments may result in loss of paid plan benefits after a grace period."
+      },
+      {
+        "title": "Cancellation and refunds",
+        "content": "You may cancel your subscription at any time via the Stripe Customer Portal. Cancellation stops future charges; access to paid features typically continues until the end of the current billing period. Refunds are handled in accordance with our policy and applicable law; we do not guarantee refunds for partial periods. Complimentary plans may be removed by administrators and are not subject to refund."
+      },
+      {
+        "title": "Price changes",
+        "content": "We may change plan prices with notice. Continued use of a paid plan after the change may constitute acceptance of the new price for subsequent billing periods."
+      }
+    ]
   },
   {
-    "title": "10. Cookies",
-    "content": "We use cookies for authentication (to keep you signed in via your session) and to improve user experience. See our Cookies section below for details."
+    "title": "6. Prohibited content",
+    "content": "Uploading or sharing prohibited content (including but not limited to NSFW, violent, hateful, or illegal material, or content that infringes others' rights) may result in immediate removal of content, account suspension, or ban. We reserve the right to remove any content and to suspend or ban users at our discretion."
   },
   {
-    "title": "11. Your Rights",
-    "content": "You can delete your images at any time from the Cephie Snap interface. For data held by Discord, refer to Discord's privacy and account controls. You may contact us to request deletion of data we hold that is tied to your account."
+    "title": "7. Limitation of liability",
+    "content": "Cephie Snap is provided \"as is\" without warranties of any kind. We are not liable for any indirect, incidental, special, or consequential damages, or for any loss of data, revenue, or use, arising from your use of the service or from payment or subscription issues (including issues with Stripe or third-party payment processors). Our total liability is limited to the amount you paid us in the twelve months preceding the claim, if any."
   },
   {
-    "title": "12. Cookies",
+    "title": "8. Changes to terms",
+    "content": "We may update these Terms at any time. Material changes will be reflected with an updated revision date. Continued use of Cephie Snap after changes means you accept the updated Terms."
+  },
+  {
+    "title": "9. Data collection (privacy)",
+    "content": "Cephie Snap values your privacy. We collect and use data as follows:",
+    "subsections": [
+      {
+        "title": "Authentication",
+        "content": "You sign in with Discord. We receive your Discord user ID, username, avatar, and (when requested) email from Discord OAuth. We do not store your Discord password. See Discord's privacy policy for how Discord handles your data."
+      },
+      {
+        "title": "Uploads",
+        "content": "When you upload images, we store the image data and metadata (URLs, timestamps) linked to your account. Paid-plan users may have access to custom URLs, albums, and other features; usage of these is stored as needed to provide the service."
+      },
+      {
+        "title": "Payment and subscription data",
+        "content": "When you subscribe or manage payments, we work with Stripe. Stripe collects and processes payment information in accordance with their privacy policy. We may store your Stripe customer ID and subscription status to enforce plan limits and to allow you to access the Stripe Customer Portal (e.g. to manage subscription or payment method). We do not store full payment card numbers."
+      },
+      {
+        "title": "API and usage",
+        "content": "API and app usage (e.g. routes, methods, timestamps, outcomes) may be logged for security, abuse prevention, and analytics. We do not sell your personal data."
+      }
+    ]
+  },
+  {
+    "title": "10. Use of data",
+    "content": "Your images and account information are used only to provide Cephie Snap services (storage, delivery, albums, limits, billing, and support). We do not sell or share your data with third parties for marketing. We may share data as required by law or with service providers (e.g. Discord for sign-in, Stripe for payments) necessary to operate the service."
+  },
+  {
+    "title": "11. Cookies",
+    "content": "We use cookies for authentication (to keep you signed in), for security, and to improve the user experience. See the Cookies section below for more detail."
+  },
+  {
+    "title": "12. Your rights",
+    "content": "You can delete your images at any time from the Cephie Snap interface. You can cancel your subscription and manage payment methods via the Stripe Customer Portal. For data held by Discord or Stripe, refer to their respective privacy and account controls. You may contact us to request access to or deletion of data we hold that is tied to your account, subject to applicable law and our need to retain data for legal or operational reasons."
+  },
+  {
+    "title": "13. Cookies (detail)",
     "content": "Cephie Snap uses cookies to provide and improve the service.",
     "subsections": [
       {
@@ -71,16 +107,16 @@
       },
       {
         "title": "Third-party",
-        "content": "Discord's OAuth may set or read cookies as part of the sign-in flow. See Discord's documentation for details."
+        "content": "Discord OAuth and Stripe (e.g. on checkout or portal pages) may set or read cookies as part of sign-in and payment flows. See Discord's and Stripe's documentation and policies for details."
       },
       {
         "title": "Managing cookies",
-        "content": "You can control cookies in your browser settings. Disabling or blocking cookies may affect your ability to sign in or use Cephie Snap."
+        "content": "You can control cookies in your browser settings. Disabling or blocking certain cookies may affect your ability to sign in or to complete payment or subscription flows."
       }
     ]
   },
   {
-    "title": "13. Policy changes",
-    "content": "We may update our privacy and cookie policies. Continued use means you accept the current versions."
+    "title": "14. Policy changes",
+    "content": "We may update our privacy and cookie policies. Changes will be reflected with an updated revision date. Continued use of Cephie Snap means you accept the current versions."
   }
 ]
