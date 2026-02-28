@@ -17,19 +17,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Discord({
       clientId: process.env.AUTH_DISCORD_CLIENT_ID,
       clientSecret: process.env.AUTH_DISCORD_CLIENT_SECRET,
+      authorization: { params: { scope: "identify" } },
     }),
   ],
   callbacks: {
     async jwt({ token, user, account }) {
       const adminIds = (process.env.ADMIN_IDS || "").split(",").map(id => id.trim());
-      
-      if (user) {
-        token.id = user.id;
-        token.isAdmin = adminIds.includes(String(user.id));
-      } else if (token.sub) {
-        token.isAdmin = adminIds.includes(String(token.sub));
+      if (user && account) {
+        token.id = account.providerAccountId;
       }
-      
+      const idToCheck = token.id ?? token.sub;
+      token.isAdmin = idToCheck ? adminIds.includes(String(idToCheck)) : false;
       return token;
     },
     async session({ session, token }) {
@@ -41,12 +39,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
     async signIn({ user, account, profile }) {
       const adminIds = (process.env.ADMIN_IDS || "").split(",").map(id => id.trim());
-      const userId = account?.providerAccountId || user.id || (profile as { id?: string })?.id;
-      
-      console.log("SignIn Attempt:", { 
-        userId, 
+      const discordId = account?.providerAccountId ?? (profile as { id?: string })?.id;
+      const userId = discordId || user.id;
+
+      console.log("SignIn Attempt:", {
+        userId,
+        discordId,
         isAdmin: userId ? adminIds.includes(String(userId)) : false,
-        adminIds, 
+        adminIds,
         provider: account?.provider,
       });
 
