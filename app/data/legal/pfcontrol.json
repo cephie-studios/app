@@ -26,14 +26,6 @@
       {
         "title": "Statistics Tracking and Leaderboards",
         "content": "PFControl tracks and displays user statistics such as total control time, sessions created, and flights managed. The top users may be displayed on public leaderboards. By using PFControl, you consent to the collection and display of this information for ranking and community engagement purposes."
-      },
-      {
-        "title": "Subscription Plans and Billing",
-        "content": "PFControl offers a free plan and one or more paid subscription plans (currently including Basic and Ultimate). Paid subscriptions are processed securely by third-party payment providers (such as Stripe). PFControl does not store full payment card details on its own servers; payment credentials are handled by the payment provider in accordance with their security standards. By starting a paid subscription, you authorize recurring charges according to the advertised price and billing interval until you cancel. You can manage or cancel your subscription at any time using the PFControl billing portal or by contacting support. Downgrades or cancellations will take effect at the end of the current billing period unless explicitly stated otherwise. Promotional or complimentary access (for example, for testers or staff) is granted at PFConnect’s discretion and may be changed or revoked at any time without compensation."
-      },
-      {
-        "title": "Plan-Based Limits and Feature Access",
-        "content": "Certain PFControl features and limits depend on your current subscription plan. Examples include, but are not limited to: (1) Maximum number of active sessions you can have at one time, (2) Maximum number of concurrent controllers that can join a session you own, (3) Access to premium features such as custom profile badges, custom background images, PDC/ATIS tools, text and voice chat, and other advanced tooling. These limits and entitlements may vary between the Free, Basic, and Ultimate plans and may be updated from time to time as PFControl evolves. Where technically feasible, PFControl enforces these limits on both the client and server side; attempts to bypass plan restrictions are prohibited and may result in suspension or termination of access. Special roles (such as testers or event controllers) may receive elevated limits or complimentary access for testing and operational purposes, but this does not create any ongoing right to those benefits and they may be adjusted or withdrawn at PFConnect’s discretion."
       }
     ]
   },
